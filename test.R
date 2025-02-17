@@ -1,0 +1,5 @@
+Feature Branch
+You create a feature branch whenever you are adding a new feature, or when you are fixing a bug that can wait until the next release. If you urgently need to fix a bug that is in a release, refer to the "hotfix" branch type below. Feature branches are branched off of the develop line and merged back into develop when completed. They are not merged directly into master.
+
+Release Branch
+Release branches are created off of the develop branch and are thoroughly tested, perhaps with bugfixes merged in, before being merged into master. Feature changes should not be applied to this branch, but should be merged into develop instead for another future release. This is essentially a "feature freeze", allowing for extensive testing to take place and achieve stability. When all necessary fixes have been made, and the release is ready, merge it into master and tag it, before then also merging it into develop.
