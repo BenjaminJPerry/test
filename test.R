@@ -3,3 +3,6 @@ You create a feature branch whenever you are adding a new feature, or when you a
 
 Release Branch
 Release branches are created off of the develop branch and are thoroughly tested, perhaps with bugfixes merged in, before being merged into master. Feature changes should not be applied to this branch, but should be merged into develop instead for another future release. This is essentially a "feature freeze", allowing for extensive testing to take place and achieve stability. When all necessary fixes have been made, and the release is ready, merge it into master and tag it, before then also merging it into develop.
+
+Hotfix Branch
+When a serious issue is discovered in production and you urgently need a quick fix, you branch branch off of master, implement the fix, and merge directly back into master and roll out. You also merge the hotfix branch into your current release branch if one is on the go. If a release branch is not in development, then you merge it into develop instead. If you merged into release instead of develop, the code for the hotfix will make it back into develop when you merge the release branch. If you have got your flow working well with the release branch and the testing, then you really shouldn't need these hotfix branches. If you find that you are having to create a lot of hotfix branches, something is wrong with your setup.
